@@ -6,6 +6,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TTRangeSliderDelegate.h"
+#import "TTRangeSlider+Calibration.h"
 
 IB_DESIGNABLE
 @interface TTRangeSlider : UIControl <UIGestureRecognizerDelegate>
