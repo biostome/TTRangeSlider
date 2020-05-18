@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FFC60B924727EAF00F52EBD /* TTRangeSlider+Calibration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC60B824727EAF00F52EBD /* TTRangeSlider+Calibration.m */; };
+		0FFC60BB24727EC800F52EBD /* TTRangeSlider+Calibration.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FFC60BA24727EC800F52EBD /* TTRangeSlider+Calibration.h */; };
 		3CE5C32FD3196B22B5BCB18B /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A359667F1B7BF328E9CF08 /* Pods-dummy.m */; };
 		612E77C54E70B435FE4DEAE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676F94A96D263F24F828EBE0 /* Foundation.framework */; };
 		619276ED5EB42E594B7C5333 /* TTRangeSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 65C5B3F357C8AC8ABCD0D05D /* TTRangeSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		06539F8C389AF10CF37BEC71 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FFC60B824727EAF00F52EBD /* TTRangeSlider+Calibration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TTRangeSlider+Calibration.m"; sourceTree = "<group>"; };
+		0FFC60BA24727EC800F52EBD /* TTRangeSlider+Calibration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TTRangeSlider+Calibration.h"; sourceTree = "<group>"; };
 		18641424B09BEC29E8D17B21 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
 		1FE399A948F1F75155C8A69C /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
 		32A359667F1B7BF328E9CF08 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 		81FCDFA1E775DC898BE03539 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0FFC60BA24727EC800F52EBD /* TTRangeSlider+Calibration.h */,
+				0FFC60B824727EAF00F52EBD /* TTRangeSlider+Calibration.m */,
 				65C5B3F357C8AC8ABCD0D05D /* TTRangeSlider.h */,
 				ADF2B0C2802F20259EFAA25E /* TTRangeSlider.m */,
 				71FDDA37DF4EB0E5D63B2210 /* TTRangeSliderDelegate.h */,
@@ -207,6 +213,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FFC60BB24727EC800F52EBD /* TTRangeSlider+Calibration.h in Headers */,
 				83551A31C8AFDFBB1826F727 /* Pods-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +269,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = A5B88EB1D5E767E23FD6C287;
@@ -290,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CE5C32FD3196B22B5BCB18B /* Pods-dummy.m in Sources */,
+				0FFC60B924727EAF00F52EBD /* TTRangeSlider+Calibration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
