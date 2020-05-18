@@ -9,11 +9,18 @@
 #import "TTRangeSlider+Calibration.h"
 #import <objc/runtime.h>
 
+@interface TTCalibrationLayer ()
+@property (assign,nonatomic) CGFloat stepCount;
+@property (assign,nonatomic) CGFloat alibreateWidth;
+@property (assign,nonatomic) CGFloat alibreateHeight;
+@property (strong,nonatomic) UIColor *tintColor;
+@end
+
 @implementation TTCalibrationLayer
 
 - (void)setupControl{
     _stepCount = 0;
-    _alibrateColor = UIColor.blackColor;
+    _tintColor = UIColor.blackColor;
     _alibreateWidth = 0.5;
     _alibreateHeight = 10;
     [self setupLayers:_stepCount];
@@ -29,23 +36,28 @@
 
 - (void)layoutSublayers{
     [super layoutSublayers];
-    if (self.stepCount > 0) {
-        CGFloat stepW = self.frame.size.width / self.stepCount;
-        [self.sublayers enumerateObjectsUsingBlock:^(__kindof CALayer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            CGRect frame = CGRectMake((idx * stepW)-(self.alibreateWidth/2.0),
-                                      CGRectGetHeight(self.frame)-self.alibreateHeight,
-                                      self.alibreateWidth,
-                                      self.alibreateHeight);
-            obj.frame = frame;
-        }];
-    }
+    [self updateLayersPosition];
 }
 
-- (void)setAlibrateColor:(UIColor *)alibrateColor{
-    _alibrateColor = alibrateColor;
+- (void)updateLayersPosition{
+    if (self.stepCount <= 0) return;
+    
+    CGFloat stepW = self.frame.size.width / self.stepCount;
     [self.sublayers enumerateObjectsUsingBlock:^(__kindof CALayer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        obj.backgroundColor = alibrateColor.CGColor;
+        CGRect frame = CGRectMake((idx * stepW)-(self.alibreateWidth/2.0),
+                                  CGRectGetHeight(self.frame)-self.alibreateHeight,
+                                  self.alibreateWidth,
+                                  self.alibreateHeight);
+        obj.frame = frame;
     }];
+}
+
+- (void)setTintColor:(UIColor *)tintColor{
+    _tintColor = tintColor;
+    [self.sublayers enumerateObjectsUsingBlock:^(__kindof CALayer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        obj.backgroundColor = tintColor.CGColor;
+    }];
+    
 }
 
 - (void)setAlibreateWidth:(CGFloat)alibreateWidth{
@@ -66,7 +78,7 @@
 - (void)setupLayers:(int)count{
     for (int i = 0; i<=count; i++) {
         CALayer * v = [[CALayer alloc]init];
-        v.backgroundColor = self.alibrateColor.CGColor;
+        v.backgroundColor = self.tintColor.CGColor;
         [self addSublayer:v];
     }
 }
@@ -85,9 +97,9 @@
 
 
 @implementation TTRangeSlider (Calibration)
-@dynamic calibrationLayer,q_sliderLiner;
+@dynamic calibrationLayer,q_sliderLiner,calibreateTintColor,calibreateBetweenColor,calibreateHeight,calibreateWidth,q_sliderLineBetweenHandles,calibreateStepCount;
 
-+ (void)swizzleMethods:(Class)class originalSelector:(SEL)origSel swizzledSelector:(SEL)swizSel {
++ (void)q_swizzleMethods:(Class)class originalSelector:(SEL)origSel swizzledSelector:(SEL)swizSel {
     
     Method origMethod = class_getInstanceMethod(class, origSel);
     Method swizMethod = class_getInstanceMethod(class, swizSel);
@@ -103,27 +115,82 @@
 + (void)load{
     #pragma clang diagnostic push
     #pragma clang diagnostic ignored "-Wundeclared-selector"
-    [TTRangeSlider swizzleMethods:[self class] originalSelector:@selector(initialiseControl) swizzledSelector:@selector(q_initControl)];
+    [TTRangeSlider q_swizzleMethods:[self class] originalSelector:@selector(initialiseControl) swizzledSelector:@selector(q_initControl)];
+    [TTRangeSlider q_swizzleMethods:[self class] originalSelector:@selector(updateHandlePositions) swizzledSelector:@selector(q_updateHandlePositions)];
     #pragma clang diagnostic pop
-    [TTRangeSlider swizzleMethods:[self class] originalSelector:@selector(layoutSubviews) swizzledSelector:@selector(q_layoutSubviews)];
+    [TTRangeSlider q_swizzleMethods:[self class] originalSelector:@selector(layoutSubviews) swizzledSelector:@selector(q_layoutSubviews)];
 }
 
+
+- (void)q_updateHandlePositions{
+    [self q_updateHandlePositions];
+    [self updateCalibrationLayersColor];
+}
 
 - (void)q_initControl{
     [self q_initControl];
     self.q_sliderLiner = [self valueForKeyPath:@"sliderLine"];
+    self.q_sliderLineBetweenHandles = [self valueForKeyPath:@"sliderLineBetweenHandles"];
     self.calibrationLayer = [[TTCalibrationLayer alloc]init];
     [self.layer insertSublayer:self.calibrationLayer atIndex:0];
 }
 
 - (void)q_layoutSubviews{
     [self q_layoutSubviews];
+    [self updateCalibrationPostion];
+}
+
+- (void)updateCalibrationLayersColor {
+    for (CALayer * layer in self.calibrationLayer.sublayers) {
+        CGFloat minx = CGRectGetMinX(self.q_sliderLineBetweenHandles.frame);
+        CGFloat maxx = CGRectGetMaxX(self.q_sliderLineBetweenHandles.frame);
+        CGFloat layerMidx = CGRectGetMidX(layer.frame);
+        if (layerMidx > minx && layerMidx < maxx) {
+            layer.backgroundColor = self.calibreateBetweenColor.CGColor;
+        }else{
+            layer.backgroundColor = self.calibreateTintColor.CGColor;
+        }
+    }
+}
+
+- (void)updateCalibrationPostion{
     CGRect sldF = self.q_sliderLiner.frame;
     self.calibrationLayer.frame = CGRectMake(CGRectGetMinX(sldF),
                                              CGRectGetMinY(self.bounds),
                                              CGRectGetWidth(sldF),
                                              CGRectGetMinY(sldF)+CGRectGetHeight(sldF));
-    
+}
+
+- (void)setHiddenCalibreate:(BOOL)hiddenCalibreate{
+    self.calibrationLayer.hidden = hiddenCalibreate;
+}
+
+- (void)setCalibreateHeight:(CGFloat)alibreateHeight{
+    self.calibrationLayer.alibreateHeight = alibreateHeight;
+}
+
+- (void)setCalibreateWidth:(CGFloat)alibreateWidth{
+    self.calibrationLayer.alibreateWidth = alibreateWidth;
+}
+
+- (void)setCalibreateStepCount:(CGFloat)stepCount{
+    self.calibrationLayer.stepCount = stepCount;
+}
+
+- (UIColor *)calibreateTintColor{
+    return (UIColor *)objc_getAssociatedObject(self, @selector(calibreateTintColor));
+}
+
+- (void)setCalibreateTintColor:(UIColor *)alibreateTintColor{
+    objc_setAssociatedObject(self, @selector(calibreateTintColor), alibreateTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIColor *)calibreateBetweenColor{
+    return (UIColor *)objc_getAssociatedObject(self, @selector(calibreateBetweenColor));
+}
+
+- (void)setCalibreateBetweenColor:(UIColor *)alibreateBetweenColor{
+    objc_setAssociatedObject(self, @selector(calibreateBetweenColor), alibreateBetweenColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (TTCalibrationLayer *)calibrationLayer{

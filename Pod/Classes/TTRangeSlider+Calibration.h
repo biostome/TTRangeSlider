@@ -12,16 +12,29 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface TTCalibrationLayer : CALayer
-@property (assign,nonatomic) CGFloat stepCount;
-@property (strong,nonatomic) UIColor *alibrateColor;
-@property (assign,nonatomic) CGFloat alibreateWidth;
-@property (assign,nonatomic) CGFloat alibreateHeight;
+
 @end
 
 
 @interface TTRangeSlider (Calibration)
 @property (strong,nonatomic) TTCalibrationLayer *calibrationLayer;
 @property (weak,nonatomic) CALayer *q_sliderLiner;
+@property (weak,nonatomic) CALayer *q_sliderLineBetweenHandles;
+
+
+/// 刻度个数
+@property (assign,nonatomic) CGFloat calibreateStepCount;
+/// 刻度宽度
+@property (assign,nonatomic) CGFloat calibreateWidth;
+/// 刻度高度
+@property (assign,nonatomic) CGFloat calibreateHeight;
+/// 最大值和最小值区间的刻度颜色
+@property (strong,nonatomic) UIColor *calibreateBetweenColor;
+/// 最大值和最小值区间之外的刻度颜色
+@property (strong,nonatomic) UIColor *calibreateTintColor;
+/// 隐藏刻度 默认为NO
+@property (assign,nonatomic) BOOL hiddenCalibreate;
 @end
+
 
 NS_ASSUME_NONNULL_END
