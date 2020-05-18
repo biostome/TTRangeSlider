@@ -129,10 +129,11 @@
 
 - (void)q_initControl{
     [self q_initControl];
-    self.q_sliderLiner = [self valueForKeyPath:@"sliderLine"];
-    self.q_sliderLineBetweenHandles = [self valueForKeyPath:@"sliderLineBetweenHandles"];
     self.calibrationLayer = [[TTCalibrationLayer alloc]init];
     [self.layer insertSublayer:self.calibrationLayer atIndex:0];
+    self.q_sliderLiner = [self valueForKeyPath:@"sliderLine"];
+    self.q_sliderLineBetweenHandles = [self valueForKeyPath:@"sliderLineBetweenHandles"];
+    self.hiddenCalibreate = YES;
 }
 
 - (void)q_layoutSubviews{

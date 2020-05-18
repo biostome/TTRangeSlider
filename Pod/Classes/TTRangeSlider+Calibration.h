@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong,nonatomic) UIColor *calibreateBetweenColor;
 /// 最大值和最小值区间之外的刻度颜色
 @property (strong,nonatomic) UIColor *calibreateTintColor;
-/// 隐藏刻度 默认为NO
+/// 隐藏刻度 默认为YES
 @property (assign,nonatomic) BOOL hiddenCalibreate;
 @end
 
