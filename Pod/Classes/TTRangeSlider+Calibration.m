@@ -7,7 +7,8 @@
 //
 
 #import "TTRangeSlider+Calibration.h"
-#import <objc/runtime.h>
+#import "TTRangeSlider+Swizzle.h"
+
 
 
 @interface TTCalibrationLayer :CALayer
@@ -110,32 +111,19 @@
 @implementation TTRangeSlider (Calibration)
 @dynamic calibrationLayer,q_sliderLiner,calibreateTintColor,calibreateBetweenColor,calibreateHeight,calibreateWidth,q_sliderLineBetweenHandles,calibreateStepCount,hiddenCalibreate;
 
-+ (void)q_swizzleMethods:(Class)class originalSelector:(SEL)origSel swizzledSelector:(SEL)swizSel {
-    
-    Method origMethod = class_getInstanceMethod(class, origSel);
-    Method swizMethod = class_getInstanceMethod(class, swizSel);
-    
-    BOOL didAddMethod = class_addMethod(class, origSel, method_getImplementation(swizMethod), method_getTypeEncoding(swizMethod));
-    if (didAddMethod) {
-        class_replaceMethod(class, swizSel, method_getImplementation(origMethod), method_getTypeEncoding(origMethod));
-    } else {
-        method_exchangeImplementations(origMethod, swizMethod);
-    }
-}
-
 + (void)load{
     #pragma clang diagnostic push
     #pragma clang diagnostic ignored "-Wundeclared-selector"
     [TTRangeSlider q_swizzleMethods:[self class] originalSelector:@selector(initialiseControl) swizzledSelector:@selector(q_initControl)];
     [TTRangeSlider q_swizzleMethods:[self class] originalSelector:@selector(updateHandlePositions) swizzledSelector:@selector(q_updateHandlePositions)];
     #pragma clang diagnostic pop
-    [TTRangeSlider q_swizzleMethods:[self class] originalSelector:@selector(layoutSubviews) swizzledSelector:@selector(q_layoutSubviews)];
 }
 
 
 - (void)q_updateHandlePositions{
     [self q_updateHandlePositions];
     [self updateCalibrationLayersColor];
+    [self updateCalibrationPostion];
 }
 
 - (void)q_initControl{
@@ -147,10 +135,6 @@
     self.hiddenCalibreate = YES;
 }
 
-- (void)q_layoutSubviews{
-    [self q_layoutSubviews];
-    [self updateCalibrationPostion];
-}
 
 - (void)updateCalibrationLayersColor {
     for (CALayer * layer in self.calibrationLayer.sublayers) {

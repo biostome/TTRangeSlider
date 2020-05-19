@@ -9,7 +9,7 @@
 #import "SecondViewController.h"
 #import <TTRangeSlider+Calibration.h>
 
-@interface SecondViewController ()
+@interface SecondViewController ()<TTRangeSliderDelegate>
 
 @property (strong, nonatomic) TTRangeSlider *rangeSliderCurrency;
 @end
@@ -25,7 +25,7 @@
 
 - (void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
-    self.rangeSliderCurrency.frame = CGRectMake(0, 100, CGRectGetWidth(self.view.frame), 130);
+    self.rangeSliderCurrency.frame = CGRectMake(20, 100, CGRectGetWidth(self.view.frame)-40, 130);
 }
 
 - (TTRangeSlider *)rangeSliderCurrency{
@@ -33,6 +33,7 @@
         _rangeSliderCurrency = [[TTRangeSlider alloc]init];
         _rangeSliderCurrency.userInteractionEnabled =YES;
         _rangeSliderCurrency.minValue = 0;
+        _rangeSliderCurrency.delegate = self;
         _rangeSliderCurrency.maxValue = 10;
         _rangeSliderCurrency.selectedMinimum = 4;
         _rangeSliderCurrency.selectedMaximum = 8;
@@ -49,7 +50,7 @@
         UIColor * silver = [UIColor colorWithRed:187/255.0 green:191/255.0 blue:201/255.0 alpha:1];
         _rangeSliderCurrency.tintColor = silver;
         NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-        formatter.numberStyle = kCFNumberFormatterNoStyle;
+        formatter.numberStyle = kCFNumberFormatterPercentStyle;
         _rangeSliderCurrency.numberFormatterOverride = formatter;
         _rangeSliderCurrency.calibreateStepCount = 10;
         _rangeSliderCurrency.calibreateTintColor = silver;
@@ -59,6 +60,27 @@
         _rangeSliderCurrency.calibreateHeight = 8.3;
     }
     return _rangeSliderCurrency;;
+}
+
+- (nullable NSString *)rangeSlider:(TTRangeSlider *_Nonnull)sender willDisplayMaximumValue:(NSString *_Nullable)maximum{
+
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.numberStyle = kCFNumberFormatterPercentStyle;
+    NSNumber * max = [formatter numberFromString:maximum];
+    if (max.integerValue == 10) {
+        return [[formatter stringFromNumber:@(9)] stringByAppendingString:@"+"];
+    }
+    return nil;
+}
+
+- (NSString *)rangeSlider:(TTRangeSlider *)sender willDisplayMinimumValue:(NSString *)minimum{
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.numberStyle = kCFNumberFormatterPercentStyle;
+    NSNumber * max = [formatter numberFromString:minimum];
+    if (max.integerValue == 10) {
+        return [[formatter stringFromNumber:@(9)] stringByAppendingString:@"+"];
+    }
+    return nil;
 }
 
 @end

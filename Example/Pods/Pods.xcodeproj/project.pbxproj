@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0636D26CCDE12A779DB850682AAA121A /* TTRangeSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 331CDAE9E0E0036DB26760E6E80804F8 /* TTRangeSlider-dummy.m */; };
+		10A54AB9E703E71019E4787CA2D857CB /* TTRangeSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ED2442990E81B8F8CD567947F827B76 /* TTRangeSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AE7DE40EB31A6EAC79CF640A6E4FF3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		2884E098C576170DBF69331943CA81C4 /* Pods-RangeSliderDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62B12788FDE3C0324C8228BB085949B6 /* Pods-RangeSliderDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		417C4FE1DE718AB788FE4BF604B9B22D /* TTRangeSlider+Calibration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A201210CFC5A08796F93DC21291DE /* TTRangeSlider+Calibration.m */; };
-		4E524B192C8943E9BF3013FCFC97E372 /* TTRangeSliderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DC14A4864E4B4D345A1BE14AA11504A /* TTRangeSliderDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		892497176A2C3669BA64C72D7CBB079B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		9715AF8807B136BF83C06BDCA32BBAAA /* TTRangeSlider+Calibration.h in Headers */ = {isa = PBXBuildFile; fileRef = D63F3A86DE7958A9B9FA960031968440 /* TTRangeSlider+Calibration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CD3A8AE65D5220D9ABFBFFFBAF4E41A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		84987F85DA1553D06837963D6EA0E810 /* TTRangeSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F564E28241C48AAA699BD5A5C7CDB6 /* TTRangeSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FE31E6B2287D696700D7ACF161131B8 /* TTRangeSliderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BCB7B6166B36C0705209AA80644A044 /* TTRangeSliderDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CA338B4170901671854D3588995091E /* Pods-RangeSliderDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB48152EC4130C80391E301EE84B1622 /* Pods-RangeSliderDemo-dummy.m */; };
-		A81E49C246096994C2A3B6B62CB52BC5 /* TTRangeSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FA6C1C61808F11D3C7BE4001E2531D1 /* TTRangeSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C04D2F5EDBB825D94A8DA79B699EEBE9 /* TTRangeSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 96269ED85A98E015608498509D05D718 /* TTRangeSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C2422AD991E501AF4F6557B74929BAAC /* TTRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = DA660ADA2B39EA63FA81561BCAABA6F9 /* TTRangeSlider.m */; };
+		A74A6165FB56EACD172CF38B99AC8619 /* TTRangeSlider+Calibration.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ED2A965EA5862A0A0EDE1A6AB0312C /* TTRangeSlider+Calibration.m */; };
+		B07FD81A401D3580552259F566CA75B7 /* TTRangeSlider+Calibration.h in Headers */ = {isa = PBXBuildFile; fileRef = CE3E361743C2DCA0C68C339C22CC01AB /* TTRangeSlider+Calibration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5A4EE36ECC7EA61F92F8E49BE5AD057 /* TTRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 497E0E7EABE75861759109F26BE44BE2 /* TTRangeSlider.m */; };
+		C9BC575E4B77D35E7E62F13229EE673E /* TTRangeSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCFBE08AE11DAFFFB23B6D351623A98 /* TTRangeSlider-dummy.m */; };
+		CC79170723F82CE66477AE9E8B9FC6D3 /* TTRangeSlider+Swizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = CFB7F354C5953618D518338A2BA32E36 /* TTRangeSlider+Swizzle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFADB3C5F8F89DFAA783281B4343ED83 /* TTRangeSlider+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = CD52979873BAC519B9E4A21CA64C9F9D /* TTRangeSlider+Swizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,44 +34,38 @@
 
 /* Begin PBXFileReference section */
 		04A325485122EDF95BD8860475FE9ADE /* Pods-RangeSliderDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RangeSliderDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		060BF4827FA528A4C5DDB01269102387 /* TTRangeSlider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TTRangeSlider-Info.plist"; sourceTree = "<group>"; };
+		148E83F96EB6824552D694CB45320D2C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		1D39E463C0201ECDD31B0D3490BDAD85 /* Pods-RangeSliderDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RangeSliderDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		1F68C5FC3ACC362D538847B5DB8B55D4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		2444765B79623F5206D27997E9338DB6 /* Pods-RangeSliderDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RangeSliderDemo.release.xcconfig"; sourceTree = "<group>"; };
-		2DC14A4864E4B4D345A1BE14AA11504A /* TTRangeSliderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTRangeSliderDelegate.h; path = Pod/Classes/TTRangeSliderDelegate.h; sourceTree = "<group>"; };
 		314404CE7C1492AACB4B85CA1AC84CDC /* TTRangeSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TTRangeSlider.framework; path = TTRangeSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		331CDAE9E0E0036DB26760E6E80804F8 /* TTRangeSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TTRangeSlider-dummy.m"; sourceTree = "<group>"; };
-		3561F3EB65C8DBAC44E121ECD9FCE8CC /* TTRangeSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TTRangeSlider.modulemap; sourceTree = "<group>"; };
-		4104EC72377592E15A14E54E9C15E5A2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		42B014948A066797043C12B847F613E6 /* TTRangeSlider.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TTRangeSlider.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		42F9F5AA777DF2EC4209A1C614036200 /* TTRangeSlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTRangeSlider.release.xcconfig; sourceTree = "<group>"; };
 		470D1ADC3DAAC5D1D2FB11DE1A43FE33 /* Pods-RangeSliderDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RangeSliderDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		4D526BCDF050715FDC534FE4804A801E /* TTRangeSlider.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TTRangeSlider.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		5D2A201210CFC5A08796F93DC21291DE /* TTRangeSlider+Calibration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TTRangeSlider+Calibration.m"; path = "Pod/Classes/TTRangeSlider+Calibration.m"; sourceTree = "<group>"; };
-		5D9E70F98971E4C07536369250D7F56D /* TTRangeSlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTRangeSlider.release.xcconfig; sourceTree = "<group>"; };
+		48E4DD35B6FDADA337BED216F1A1ED48 /* TTRangeSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTRangeSlider-prefix.pch"; sourceTree = "<group>"; };
+		497E0E7EABE75861759109F26BE44BE2 /* TTRangeSlider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTRangeSlider.m; path = Pod/Classes/TTRangeSlider.m; sourceTree = "<group>"; };
+		4BCB7B6166B36C0705209AA80644A044 /* TTRangeSliderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTRangeSliderDelegate.h; path = Pod/Classes/TTRangeSliderDelegate.h; sourceTree = "<group>"; };
 		62B12788FDE3C0324C8228BB085949B6 /* Pods-RangeSliderDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RangeSliderDemo-umbrella.h"; sourceTree = "<group>"; };
-		7FA6C1C61808F11D3C7BE4001E2531D1 /* TTRangeSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTRangeSlider-umbrella.h"; sourceTree = "<group>"; };
 		8F8F77178465DD317F0C204CE9ED0044 /* Pods-RangeSliderDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RangeSliderDemo-Info.plist"; sourceTree = "<group>"; };
-		96269ED85A98E015608498509D05D718 /* TTRangeSlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTRangeSlider.h; path = Pod/Classes/TTRangeSlider.h; sourceTree = "<group>"; };
+		93ED2A965EA5862A0A0EDE1A6AB0312C /* TTRangeSlider+Calibration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TTRangeSlider+Calibration.m"; path = "Pod/Classes/TTRangeSlider+Calibration.m"; sourceTree = "<group>"; };
+		9615B688FF7010310D174C054D161260 /* TTRangeSlider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTRangeSlider.debug.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9ED2442990E81B8F8CD567947F827B76 /* TTRangeSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTRangeSlider-umbrella.h"; sourceTree = "<group>"; };
 		A67727506DC60136772A982865241B08 /* Pods-RangeSliderDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RangeSliderDemo-frameworks.sh"; sourceTree = "<group>"; };
-		A93D4E6F0D8E20B2A24EAB93207E62BE /* TTRangeSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTRangeSlider-prefix.pch"; sourceTree = "<group>"; };
-		CA0C913211888FA4AFDFC110ABA8459A /* TTRangeSlider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTRangeSlider.debug.xcconfig; sourceTree = "<group>"; };
-		D63F3A86DE7958A9B9FA960031968440 /* TTRangeSlider+Calibration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TTRangeSlider+Calibration.h"; path = "Pod/Classes/TTRangeSlider+Calibration.h"; sourceTree = "<group>"; };
-		DA660ADA2B39EA63FA81561BCAABA6F9 /* TTRangeSlider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTRangeSlider.m; path = Pod/Classes/TTRangeSlider.m; sourceTree = "<group>"; };
+		AB0B2C40F34349A6149302D4DF39BBFA /* TTRangeSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TTRangeSlider.modulemap; sourceTree = "<group>"; };
+		B3F564E28241C48AAA699BD5A5C7CDB6 /* TTRangeSlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTRangeSlider.h; path = Pod/Classes/TTRangeSlider.h; sourceTree = "<group>"; };
+		BDCFBE08AE11DAFFFB23B6D351623A98 /* TTRangeSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TTRangeSlider-dummy.m"; sourceTree = "<group>"; };
+		CD52979873BAC519B9E4A21CA64C9F9D /* TTRangeSlider+Swizzle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TTRangeSlider+Swizzle.m"; path = "Pod/Classes/TTRangeSlider+Swizzle.m"; sourceTree = "<group>"; };
+		CE3E361743C2DCA0C68C339C22CC01AB /* TTRangeSlider+Calibration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TTRangeSlider+Calibration.h"; path = "Pod/Classes/TTRangeSlider+Calibration.h"; sourceTree = "<group>"; };
+		CF731803F2FAB49625BC5C52C960388E /* TTRangeSlider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TTRangeSlider-Info.plist"; sourceTree = "<group>"; };
+		CFB7F354C5953618D518338A2BA32E36 /* TTRangeSlider+Swizzle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TTRangeSlider+Swizzle.h"; path = "Pod/Classes/TTRangeSlider+Swizzle.h"; sourceTree = "<group>"; };
 		E434D720E8B0E91423CB259C31282E6A /* Pods_RangeSliderDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RangeSliderDemo.framework; path = "Pods-RangeSliderDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8E0CBD82ECA575CFC2CF7E14BF5A905 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		EB48152EC4130C80391E301EE84B1622 /* Pods-RangeSliderDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RangeSliderDemo-dummy.m"; sourceTree = "<group>"; };
 		FF8D1F4DFDA018BF5D311D664CF1E8BB /* Pods-RangeSliderDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RangeSliderDemo.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		37BCDCDE0CE9DB8B4E6D05B568F43F31 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				892497176A2C3669BA64C72D7CBB079B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		49CD5CCB232254758A9A8F7B1D83546A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,30 +74,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B8C811423B6699BE66D7A0FE17FCF38B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CD3A8AE65D5220D9ABFBFFFBAF4E41A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		145F29924486DB489FF64143B13ACD87 /* TTRangeSlider */ = {
+		0B313561A9FDEA6785C1BEA3D6388A41 /* TTRangeSlider */ = {
 			isa = PBXGroup;
 			children = (
-				96269ED85A98E015608498509D05D718 /* TTRangeSlider.h */,
-				DA660ADA2B39EA63FA81561BCAABA6F9 /* TTRangeSlider.m */,
-				D63F3A86DE7958A9B9FA960031968440 /* TTRangeSlider+Calibration.h */,
-				5D2A201210CFC5A08796F93DC21291DE /* TTRangeSlider+Calibration.m */,
-				2DC14A4864E4B4D345A1BE14AA11504A /* TTRangeSliderDelegate.h */,
-				E3F3EFF5AB68DB8916FA289A07DA4B4E /* Pod */,
-				FF7F142BE051A8570A8B4B5F9A95F7EA /* Support Files */,
+				B3F564E28241C48AAA699BD5A5C7CDB6 /* TTRangeSlider.h */,
+				497E0E7EABE75861759109F26BE44BE2 /* TTRangeSlider.m */,
+				CE3E361743C2DCA0C68C339C22CC01AB /* TTRangeSlider+Calibration.h */,
+				93ED2A965EA5862A0A0EDE1A6AB0312C /* TTRangeSlider+Calibration.m */,
+				CFB7F354C5953618D518338A2BA32E36 /* TTRangeSlider+Swizzle.h */,
+				CD52979873BAC519B9E4A21CA64C9F9D /* TTRangeSlider+Swizzle.m */,
+				4BCB7B6166B36C0705209AA80644A044 /* TTRangeSliderDelegate.h */,
+				6BDD30E523C047BE945B4C83F7AEC6D7 /* Pod */,
+				8579C9E3DA5C80E7632AD3FEACC75BD6 /* Support Files */,
 			);
 			name = TTRangeSlider;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		202038EB443290152B0777483F026A01 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				145F29924486DB489FF64143B13ACD87 /* TTRangeSlider */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		20BE180EB4AB66A16850B5EA56956572 /* Targets Support Files */ = {
@@ -110,6 +108,16 @@
 				6D78317E4183C2260B8B615BECE87A92 /* Pods-RangeSliderDemo */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6BDD30E523C047BE945B4C83F7AEC6D7 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				148E83F96EB6824552D694CB45320D2C /* LICENSE */,
+				E8E0CBD82ECA575CFC2CF7E14BF5A905 /* README.md */,
+				42B014948A066797043C12B847F613E6 /* TTRangeSlider.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		6D78317E4183C2260B8B615BECE87A92 /* Pods-RangeSliderDemo */ = {
@@ -127,6 +135,29 @@
 			);
 			name = "Pods-RangeSliderDemo";
 			path = "Target Support Files/Pods-RangeSliderDemo";
+			sourceTree = "<group>";
+		};
+		8579C9E3DA5C80E7632AD3FEACC75BD6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB0B2C40F34349A6149302D4DF39BBFA /* TTRangeSlider.modulemap */,
+				BDCFBE08AE11DAFFFB23B6D351623A98 /* TTRangeSlider-dummy.m */,
+				CF731803F2FAB49625BC5C52C960388E /* TTRangeSlider-Info.plist */,
+				48E4DD35B6FDADA337BED216F1A1ED48 /* TTRangeSlider-prefix.pch */,
+				9ED2442990E81B8F8CD567947F827B76 /* TTRangeSlider-umbrella.h */,
+				9615B688FF7010310D174C054D161260 /* TTRangeSlider.debug.xcconfig */,
+				42F9F5AA777DF2EC4209A1C614036200 /* TTRangeSlider.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TTRangeSlider";
+			sourceTree = "<group>";
+		};
+		A244968F662874FA6484A28F802A27D4 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B313561A9FDEA6785C1BEA3D6388A41 /* TTRangeSlider */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -150,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				202038EB443290152B0777483F026A01 /* Development Pods */,
+				A244968F662874FA6484A28F802A27D4 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				C0CB33B9FDE8AB53B1C510E8E2E0EB77 /* Products */,
 				20BE180EB4AB66A16850B5EA56956572 /* Targets Support Files */,
@@ -165,31 +196,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E3F3EFF5AB68DB8916FA289A07DA4B4E /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				1F68C5FC3ACC362D538847B5DB8B55D4 /* LICENSE */,
-				4104EC72377592E15A14E54E9C15E5A2 /* README.md */,
-				4D526BCDF050715FDC534FE4804A801E /* TTRangeSlider.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		FF7F142BE051A8570A8B4B5F9A95F7EA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3561F3EB65C8DBAC44E121ECD9FCE8CC /* TTRangeSlider.modulemap */,
-				331CDAE9E0E0036DB26760E6E80804F8 /* TTRangeSlider-dummy.m */,
-				060BF4827FA528A4C5DDB01269102387 /* TTRangeSlider-Info.plist */,
-				A93D4E6F0D8E20B2A24EAB93207E62BE /* TTRangeSlider-prefix.pch */,
-				7FA6C1C61808F11D3C7BE4001E2531D1 /* TTRangeSlider-umbrella.h */,
-				CA0C913211888FA4AFDFC110ABA8459A /* TTRangeSlider.debug.xcconfig */,
-				5D9E70F98971E4C07536369250D7F56D /* TTRangeSlider.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/TTRangeSlider";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -201,14 +207,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC08E82ECCBBF67096823CCF26884FA2 /* Headers */ = {
+		8D705FCCCFEF316BBD76F968A3F54B8E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9715AF8807B136BF83C06BDCA32BBAAA /* TTRangeSlider+Calibration.h in Headers */,
-				A81E49C246096994C2A3B6B62CB52BC5 /* TTRangeSlider-umbrella.h in Headers */,
-				C04D2F5EDBB825D94A8DA79B699EEBE9 /* TTRangeSlider.h in Headers */,
-				4E524B192C8943E9BF3013FCFC97E372 /* TTRangeSliderDelegate.h in Headers */,
+				B07FD81A401D3580552259F566CA75B7 /* TTRangeSlider+Calibration.h in Headers */,
+				CC79170723F82CE66477AE9E8B9FC6D3 /* TTRangeSlider+Swizzle.h in Headers */,
+				10A54AB9E703E71019E4787CA2D857CB /* TTRangeSlider-umbrella.h in Headers */,
+				84987F85DA1553D06837963D6EA0E810 /* TTRangeSlider.h in Headers */,
+				8FE31E6B2287D696700D7ACF161131B8 /* TTRangeSliderDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,12 +224,12 @@
 /* Begin PBXNativeTarget section */
 		05ECCA2E3E16948A8CDA86E2A6E279C3 /* TTRangeSlider */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 91A7A5524063565D02C38B4F3102255C /* Build configuration list for PBXNativeTarget "TTRangeSlider" */;
+			buildConfigurationList = BCDAFBA3D4DA32B0C7F044A9C7C5B618 /* Build configuration list for PBXNativeTarget "TTRangeSlider" */;
 			buildPhases = (
-				FC08E82ECCBBF67096823CCF26884FA2 /* Headers */,
-				A4180D1B61D4466A3E403322B7625337 /* Sources */,
-				37BCDCDE0CE9DB8B4E6D05B568F43F31 /* Frameworks */,
-				9AECC477BA70087A32EA6903C0585874 /* Resources */,
+				8D705FCCCFEF316BBD76F968A3F54B8E /* Headers */,
+				D02CA6C49152271D98067576636A230B /* Sources */,
+				B8C811423B6699BE66D7A0FE17FCF38B /* Frameworks */,
+				7E60B72D8F993BA65BE7E1E4CC54A82A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -288,7 +295,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9AECC477BA70087A32EA6903C0585874 /* Resources */ = {
+		7E60B72D8F993BA65BE7E1E4CC54A82A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -298,13 +305,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A4180D1B61D4466A3E403322B7625337 /* Sources */ = {
+		D02CA6C49152271D98067576636A230B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				417C4FE1DE718AB788FE4BF604B9B22D /* TTRangeSlider+Calibration.m in Sources */,
-				0636D26CCDE12A779DB850682AAA121A /* TTRangeSlider-dummy.m in Sources */,
-				C2422AD991E501AF4F6557B74929BAAC /* TTRangeSlider.m in Sources */,
+				A74A6165FB56EACD172CF38B99AC8619 /* TTRangeSlider+Calibration.m in Sources */,
+				FFADB3C5F8F89DFAA783281B4343ED83 /* TTRangeSlider+Swizzle.m in Sources */,
+				C9BC575E4B77D35E7E62F13229EE673E /* TTRangeSlider-dummy.m in Sources */,
+				C5A4EE36ECC7EA61F92F8E49BE5AD057 /* TTRangeSlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,9 +336,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0B40C3A7C2E0525A73CBFAD88EC38C28 /* Release */ = {
+		6C6F18AE026F951C872662C703704216 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D9E70F98971E4C07536369250D7F56D /* TTRangeSlider.release.xcconfig */;
+			baseConfigurationReference = 42F9F5AA777DF2EC4209A1C614036200 /* TTRangeSlider.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -358,36 +366,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		3C4D4E84B040984C283290250FC7CF96 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA0C913211888FA4AFDFC110ABA8459A /* TTRangeSlider.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TTRangeSlider/TTRangeSlider-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TTRangeSlider/TTRangeSlider-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TTRangeSlider/TTRangeSlider.modulemap";
-				PRODUCT_MODULE_NAME = TTRangeSlider;
-				PRODUCT_NAME = TTRangeSlider;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		7E5AAFFA46AEE3559BB6610635719F61 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -480,6 +458,36 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		981C49F473883764A1E9159E4AE9E890 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9615B688FF7010310D174C054D161260 /* TTRangeSlider.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TTRangeSlider/TTRangeSlider-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TTRangeSlider/TTRangeSlider-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TTRangeSlider/TTRangeSlider.modulemap";
+				PRODUCT_MODULE_NAME = TTRangeSlider;
+				PRODUCT_NAME = TTRangeSlider;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -601,11 +609,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		91A7A5524063565D02C38B4F3102255C /* Build configuration list for PBXNativeTarget "TTRangeSlider" */ = {
+		BCDAFBA3D4DA32B0C7F044A9C7C5B618 /* Build configuration list for PBXNativeTarget "TTRangeSlider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3C4D4E84B040984C283290250FC7CF96 /* Debug */,
-				0B40C3A7C2E0525A73CBFAD88EC38C28 /* Release */,
+				981C49F473883764A1E9159E4AE9E890 /* Debug */,
+				6C6F18AE026F951C872662C703704216 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

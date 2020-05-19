@@ -14,18 +14,28 @@
 @optional
 
 /**
+* Called when will set min value label
+*/
+- (nullable NSString *)rangeSlider:(TTRangeSlider *_Nonnull)sender willDisplayMinimumValue:(NSString *_Nullable)minimum;
+
+/**
+* Called when will set max value label
+*/
+- (nullable NSString *)rangeSlider:(TTRangeSlider *_Nonnull)sender willDisplayMaximumValue:(NSString *_Nullable)maximum;
+
+/**
  * Called when the RangeSlider values are changed
  */
--(void)rangeSlider:(TTRangeSlider *)sender didChangeSelectedMinimumValue:(float)selectedMinimum andMaximumValue:(float)selectedMaximum;
+-(void)rangeSlider:(TTRangeSlider *_Nonnull)sender didChangeSelectedMinimumValue:(float)selectedMinimum andMaximumValue:(float)selectedMaximum;
 
 /**
  * Called when the user has finished interacting with the RangeSlider
  */
-- (void)didEndTouchesInRangeSlider:(TTRangeSlider *)sender;
+- (void)didEndTouchesInRangeSlider:(TTRangeSlider *_Nonnull)sender;
 
 /**
  * Called when the user has started interacting with the RangeSlider
  */
-- (void)didStartTouchesInRangeSlider:(TTRangeSlider *)sender;
+- (void)didStartTouchesInRangeSlider:(TTRangeSlider *_Nonnull)sender;
 
 @end

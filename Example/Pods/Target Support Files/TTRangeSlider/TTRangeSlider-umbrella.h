@@ -11,6 +11,7 @@
 #endif
 
 #import "TTRangeSlider+Calibration.h"
+#import "TTRangeSlider+Swizzle.h"
 #import "TTRangeSlider.h"
 #import "TTRangeSliderDelegate.h"
 
