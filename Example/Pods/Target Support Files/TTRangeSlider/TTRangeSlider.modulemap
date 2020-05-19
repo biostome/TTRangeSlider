@@ -1,5 +1,5 @@
 framework module TTRangeSlider {
-  umbrella header "Pods-TTRangeSlider-umbrella.h"
+  umbrella header "TTRangeSlider-umbrella.h"
 
   export *
   module * { export * }
