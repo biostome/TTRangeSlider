@@ -9,7 +9,8 @@
 #import "TTRangeSlider+Calibration.h"
 #import <objc/runtime.h>
 
-@interface TTCalibrationLayer ()
+
+@interface TTCalibrationLayer :CALayer
 @property (assign,nonatomic) CGFloat stepCount;
 @property (assign,nonatomic) CGFloat alibreateWidth;
 @property (assign,nonatomic) CGFloat alibreateHeight;
@@ -43,13 +44,17 @@
     if (self.stepCount <= 0) return;
     
     CGFloat stepW = self.frame.size.width / self.stepCount;
-    [self.sublayers enumerateObjectsUsingBlock:^(__kindof CALayer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        CGRect frame = CGRectMake((idx * stepW)-(self.alibreateWidth/2.0),
+    for (int i = 0; i<self.stepCount; i++) {
+        CGRect frame = CGRectMake((i * stepW)-(self.alibreateWidth/2.0),
                                   CGRectGetHeight(self.frame)-self.alibreateHeight,
                                   self.alibreateWidth,
                                   self.alibreateHeight);
-        obj.frame = frame;
-    }];
+        self.sublayers[i].frame = frame;
+    }
+    self.sublayers.lastObject.frame = CGRectMake((self.stepCount * stepW)-(self.alibreateWidth/2.0),
+                                                 CGRectGetHeight(self.frame)-self.alibreateHeight,
+                                                 self.alibreateWidth,
+                                                 self.alibreateHeight);
 }
 
 - (void)setTintColor:(UIColor *)tintColor{
@@ -76,11 +81,17 @@
 }
 
 - (void)setupLayers:(int)count{
-    for (int i = 0; i<=count; i++) {
+    if (count <= 0) return;
+    
+    for (int i = 0; i<count; i++) {
         CALayer * v = [[CALayer alloc]init];
         v.backgroundColor = self.tintColor.CGColor;
         [self addSublayer:v];
     }
+    /// one more
+    CALayer * v = [[CALayer alloc]init];
+    v.backgroundColor = self.tintColor.CGColor;
+    [self addSublayer:v];
 }
 
 - (void)removeAllLayers{
@@ -97,7 +108,7 @@
 
 
 @implementation TTRangeSlider (Calibration)
-@dynamic calibrationLayer,q_sliderLiner,calibreateTintColor,calibreateBetweenColor,calibreateHeight,calibreateWidth,q_sliderLineBetweenHandles,calibreateStepCount;
+@dynamic calibrationLayer,q_sliderLiner,calibreateTintColor,calibreateBetweenColor,calibreateHeight,calibreateWidth,q_sliderLineBetweenHandles,calibreateStepCount,hiddenCalibreate;
 
 + (void)q_swizzleMethods:(Class)class originalSelector:(SEL)origSel swizzledSelector:(SEL)swizSel {
     

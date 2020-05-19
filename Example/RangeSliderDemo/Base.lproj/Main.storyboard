@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zoN-NS-23h">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zoN-NS-23h">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DwD-4K-U87" customClass="TTRangeSlider">
-                                <rect key="frame" x="20" y="160" width="560" height="65"/>
+                                <rect key="frame" x="20" y="140" width="560" height="65"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.95926036010000004" green="0.14687572130000001" blue="0.021226121880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -36,7 +33,7 @@
                                 </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standard Range:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uv3-Bw-dbz">
-                                <rect key="frame" x="20" y="114" width="128" height="21"/>
+                                <rect key="frame" x="20" y="94" width="128" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -48,13 +45,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Range:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auG-6C-UUJ">
-                                <rect key="frame" x="20" y="250" width="128" height="21"/>
+                                <rect key="frame" x="20" y="230" width="128" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RTp-xv-6Dx" customClass="TTRangeSlider">
-                                <rect key="frame" x="20" y="296" width="560" height="65"/>
+                                <rect key="frame" x="20" y="276" width="560" height="65"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="EYa-1H-cea"/>
@@ -68,13 +65,13 @@
                                 </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Range and Image Handle:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF3-K2-d12">
-                                <rect key="frame" x="20" y="386" width="260" height="21"/>
+                                <rect key="frame" x="20" y="366" width="260" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yD-aN-v9q" customClass="TTRangeSlider">
-                                <rect key="frame" x="20" y="432" width="560" height="65"/>
+                                <rect key="frame" x="20" y="412" width="560" height="65"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.94117647059999998" green="0.3411764706" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -105,13 +102,13 @@
                                 </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Range with Step:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8O-3X-6fq">
-                                <rect key="frame" x="20" y="522" width="205" height="21"/>
+                                <rect key="frame" x="20" y="502" width="205" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9Y-9Z-GaJ" customClass="TTRangeSlider">
-                                <rect key="frame" x="20" y="568" width="560" height="65"/>
+                                <rect key="frame" x="20" y="548" width="560" height="65"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="NL8-2S-9jM"/>
@@ -143,7 +140,7 @@
                                 </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hidden Labels:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1k3-K5-JnB">
-                                <rect key="frame" x="20" y="641" width="207" height="21"/>
+                                <rect key="frame" x="20" y="621" width="207" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="207" id="aQ7-h6-YjY"/>
                                     <constraint firstAttribute="height" constant="21" id="nGV-LV-Pzx"/>
@@ -153,7 +150,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVE-c7-h8z" customClass="TTRangeSlider">
-                                <rect key="frame" x="20" y="675" width="560" height="65"/>
+                                <rect key="frame" x="20" y="655" width="560" height="65"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="59D-FQ-d3c"/>
@@ -218,7 +215,13 @@
                             <constraint firstItem="WF3-K2-d12" firstAttribute="top" secondItem="RTp-xv-6Dx" secondAttribute="bottom" constant="25" id="qFC-4i-tun"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TTRangeSlider" id="iHr-ZZ-EbV"/>
+                    <navigationItem key="navigationItem" title="TTRangeSlider" id="iHr-ZZ-EbV">
+                        <barButtonItem key="rightBarButtonItem" title="next" id="dCA-9c-eev">
+                            <connections>
+                                <segue destination="F2x-Zh-Fvb" kind="presentation" id="lHG-Yl-D74"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="800"/>
                     <connections>
@@ -231,13 +234,31 @@
             </objects>
             <point key="canvasLocation" x="1056" y="1050"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="fcT-59-UI5">
+            <objects>
+                <viewController id="F2x-Zh-Fvb" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AWm-Jn-vyt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fsu-td-xsI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iwr-o2-N4z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UdL-J7-zKI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1969" y="990"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="boc-PQ-Scg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zoN-NS-23h" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="V8q-AG-fax">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

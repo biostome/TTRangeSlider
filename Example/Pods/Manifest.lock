@@ -1,5 +1,5 @@
 PODS:
-  - TTRangeSlider (1.0.2)
+  - TTRangeSlider (1.0.7)
 
 DEPENDENCIES:
   - TTRangeSlider (from `../`)
@@ -9,6 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TTRangeSlider: e41d992cc0047da48884ad507f968db5ab08441b
+  TTRangeSlider: b2bb6011a5e2ef4b967454c71337ae241a675446
 
-COCOAPODS: 0.37.2
+PODFILE CHECKSUM: 00e6bce2c24c8daea487170fa400b999cdc25320
+
+COCOAPODS: 1.9.1

@@ -7,13 +7,11 @@
 //
 
 #import <TTRangeSlider/TTRangeSlider.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 
-
-@interface TTCalibrationLayer : CALayer
-
-@end
+@class TTCalibrationLayer;
 
 
 @interface TTRangeSlider (Calibration)
